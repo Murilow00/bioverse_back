@@ -12,11 +12,20 @@ datasource db {
   provider = "postgresql"
 }
 
-model Exemplo {
+model Noticia {
     id        Int      @id @default(autoincrement())
-    nome      String
-    foto      String?
-    documento String?
+    titulo      String
+    resumo      String?
+    conteudo_completo String?
+    img         String?
 
-    @@map("exemplo")
+
+    @@map("noticia")
+}
+
+model Carreiras {
+   id        Int      @id @default(autoincrement())
+   cursos_relacionados  String[]
+   profissoes           String[]
+   
 }
