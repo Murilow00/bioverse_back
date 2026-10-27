@@ -1,7 +1,7 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "description": "Atividade Avaliativa, postando nossa API na web",
+  "description": "Projeto final do curso de Desenvolvimento de Sistemas",
   "main": "server.js",
   "type": "module",
   "private": true,
