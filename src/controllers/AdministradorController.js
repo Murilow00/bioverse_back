@@ -1,5 +1,5 @@
 
-import AdministradorModel from '../models/Administrador.js';
+import AdministradorModel from '../models/AdministradorModel.js';
 
 export const criar = async (req, res) => {
     try {
