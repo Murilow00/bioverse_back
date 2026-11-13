@@ -1,4 +1,4 @@
-import SobreNosModel from '../models/SobreNos.js';
+import SobreNosModel from '../models/SobreNosModel.js';
 
 export const criar = async (req, res) => {
     try {
