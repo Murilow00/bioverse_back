@@ -1,6 +1,6 @@
 import express from 'express';
 import 'dotenv/config';
-import exemploRoute from './routes/exemploRoutes.js';
+import SobreNosRoute from './routes/SobreNosRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 // Rotas
-app.use('/api/exemplos', exemploRoute);
+app.use('/api/SobreNos', SobreNosRoute);
 
 app.use((req, res) => {
     res.status(404).json({ error: 'Rota não encontrada' });
