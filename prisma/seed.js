@@ -290,7 +290,7 @@ async function main() {
       simuladoId: simulado.id,
       acertos: 4,
       total_questoes: 3,
-      percentual: 66.67,
+      percentual: 67.67,
       tempo_gasto: 420,
     },
   });
