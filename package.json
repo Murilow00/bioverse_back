@@ -1,3 +1,4 @@
+
 {
   "name": "back",
   "version": "1.0.0",
@@ -6,7 +7,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "cls && nodemon src/server.js"
+    "dev": "cls && nodemon src/server.js",
+    "seed": "prisma db seed"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "keywords": [
     "SENAI",
@@ -19,18 +24,17 @@
   "author": "Murilo",
   "license": "MIT",
   "dependencies": {
-    "@prisma/adapter-pg": "^7.3.0",
-    "@prisma/client": "^7.10.1",
+    "@prisma/client": "6.19.3",
     "@supabase/supabase-js": "^2.103.0",
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "multer": "^2.1.1",
-    "pg": "^8.20.0",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
-    "prisma": "^7.10.1"
+    "prisma": "6.19.3"
   }
 }
