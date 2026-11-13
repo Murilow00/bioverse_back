@@ -288,7 +288,7 @@ async function main() {
     data: {
       nome_aluno: 'João Pedro Silva',
       simuladoId: simulado.id,
-      acertos: 2,
+      acertos: 4,
       total_questoes: 3,
       percentual: 66.67,
       tempo_gasto: 420,
