@@ -60,7 +60,6 @@ export const criar = async (req, res) => {
       simulado: simuladoCriado,
     });
   } catch (error) {
-    // Retorna 400 se o erro vier da validação de limites/campos
     const isErroValidacao =
       error.message.includes("obrigatório") ||
       error.message.includes("não pode") ||
