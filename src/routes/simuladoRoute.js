@@ -1,11 +1,11 @@
 import express from 'express';
-import * as controller from '../controllers/VideoController.js';
+import * as controller from "../controllers/simuladoController.js";
 
 const router = express.Router();
 
+router.get('/', controller.listarTodos);
+router.get('/:id', controller.listarUm);
 router.post('/', controller.criar);
-router.get('/', controller.buscarTodos);
-router.get('/:id', controller.buscarPorId);
 router.put('/:id', controller.atualizar);
 router.delete('/:id', controller.deletar);
 
