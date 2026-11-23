@@ -1,6 +1,5 @@
-
 import express from 'express';
-import * as controller from '../controllers/DicaController.js';
+import * as controller from '../controllers/sobreNosController.js';
 
 const router = express.Router();
 

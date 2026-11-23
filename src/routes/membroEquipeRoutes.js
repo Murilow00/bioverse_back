@@ -1,6 +1,6 @@
 
 import express from 'express';
-import * as controller from '../controllers/EstagioController.js';
+import * as controller from '../controllers/membroEquipeController.js';
 
 const router = express.Router();
 
