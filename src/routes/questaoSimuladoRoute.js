@@ -1,6 +1,5 @@
-
 import express from 'express';
-import * as controller from '../controllers/EstagioController.js';
+import * as controller from '../controllers/questaoSimulado.js';
 
 const router = express.Router();
 

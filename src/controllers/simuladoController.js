@@ -1,4 +1,4 @@
-import SimuladoModel from "../Models/SimuladoModel.js";
+import SimuladoModel from "../models/SimuladoModel.js";
 
 export const listarTodos = async (req, res) => {
   try {
