@@ -63,8 +63,8 @@ async function main() {
 },
 {
     nome: 'Bianca Teodoro',
-    funcao: 'Product Owner (PO)',
-    bio: 'Responsável pela organização do projeto, definição de prioridades e acompanhamento das atividades da equipe.',
+    funcao: 'Desenvolvedora',
+    bio: 'Atua no desenvolvimento da plataforma, colaborando na implementação de funcionalidades e na construção das soluções do BioVerse.',
     foto: 'https://avatars.githubusercontent.com/u/201223146?s=130&v=4',
     ordem: 2,
     ativo: true,
@@ -87,7 +87,7 @@ async function main() {
 },
 {
     nome: 'Beatriz Miotto',
-    funcao: 'Desenvolvedora Full Stack',
+    funcao: 'Desenvolvedora',
     bio: 'Atua no desenvolvimento do front-end e back-end, trabalhando na construção das interfaces, funcionalidades e integração do sistema.',
     foto: 'https://avatars.githubusercontent.com/u/197295679?v=4',
     ordem: 5,
