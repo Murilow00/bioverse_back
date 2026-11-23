@@ -30,8 +30,14 @@ async function main() {
 
   await prisma.administrador.create({
     data: {
-      nome: 'Administrador Principal',
-      email: 'admin@portal.edu.br',
+      nome: 'Murilo Milan',
+      email: 'murilo@portal.edu.br',
+      senha: senhaHash,
+      ativo: true,
+    },
+    data: {
+      nome: 'Lívia Oliveira',
+      email: 'livia@portal.edu.br',
       senha: senhaHash,
       ativo: true,
     },
