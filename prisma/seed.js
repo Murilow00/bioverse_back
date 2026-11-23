@@ -1,8 +1,13 @@
 import 'dotenv/config';
 import { PrismaClient } from '../src/generated/prisma/index.js';
+import { PrismaPg } from '@prisma/adapter-pg';
 import bcrypt from 'bcryptjs';
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
+});
+
+const prisma = new PrismaClient({ adapter });
 
 async function main() {
   console.log('🌱 Iniciando o seed do banco de dados...');
