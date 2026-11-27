@@ -1,12 +1,12 @@
+import pg from 'pg';
 import 'dotenv/config';
-import { PrismaClient } from '../src/generated/prisma/index.js';
+import pkg from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import bcrypt from 'bcryptjs';
 
-const adapter = new PrismaPg({
-  connectionString: process.env.DATABASE_URL,
-});
-
+const { PrismaClient } = pkg;
+const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
@@ -497,7 +497,7 @@ async function main() {
         ordem: 1,
         publicado: true,
       },
-      { 
+      {
         titulo: 'Ecologia: conceitos básicos e fluxo de energia em 7 minutos',
         descricao: 'Ecologia tem muito nome pra guardar, mas a ideia que sustenta tudo é uma só: a matéria volta pros produtores e a energia não volta. Cada nível trófico perde energia pro ambiente na forma de calor, e é por isso que nenhuma cadeia alimentar é infinita. É esse raciocínio que a prova cobra.',
         url: 'https://youtu.be/TsclSi3nNsI',
