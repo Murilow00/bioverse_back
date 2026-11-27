@@ -158,7 +158,6 @@ model MembroEquipe {
   @@map("membro_equipe")
 }
 
-<<<<<<< HEAD
 model Administrador {
   id           Int       @id @default(autoincrement())
   nome         String
@@ -169,7 +168,10 @@ model Administrador {
   criadoEm     DateTime  @default(now())
   atualizadoEm DateTime  @updatedAt
 
-=======
+  @@map("administrador")
+
+}
+
 model Usuario {
   id           Int      @id @default(autoincrement())
   nome         String
@@ -182,16 +184,4 @@ model Usuario {
   @@map("usuarios")
 }
 
-model Administrador {
-  id           Int       @id @default(autoincrement())
-  nome         String
-  email        String    @unique
-  senha        String
-  ativo        Boolean   @default(true)
-  ultimoLogin  DateTime?
-  criadoEm     DateTime  @default(now())
-  atualizadoEm DateTime  @updatedAt
 
->>>>>>> 70a58a82010192e624c30666fda60db4e8b93a64
-  @@map("administrador")
-}
