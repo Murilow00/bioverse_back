@@ -1,4 +1,4 @@
-import pg from 'pg';
+  import pg from 'pg';
 import 'dotenv/config';
 import pkg from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
@@ -130,6 +130,7 @@ async function main() {
         img: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?w=800',
         data: new Date('2026-11-14T12:00:00.000Z'),
         categoria: 'Zoologia e Entomologia',
+        fonte: 'https://www.agenciaminas.mg.gov.br/noticia/nova-especie-de-inseto-aquatico-e-descoberta-no-parque-estadual-da-serra-do-brigadeiro?utm_source=chatgpt.com',
         publicada: true,
         destaque: true,
       },
@@ -142,6 +143,7 @@ async function main() {
         img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
         data: new Date('2026-10-29T12:00:00.000Z'),
         categoria: 'Botânica e Conservação',
+        fonte: 'https://www.gov.br/mma/pt-br/noticias/mma-atualiza-lista-nacional-de-plantas-ameacadas-de-extincao/?utm_source=chatgpt.com',
         publicada: true,
         destaque: true,
       },
@@ -154,6 +156,7 @@ async function main() {
         img: 'https://images.unsplash.com/photo-1518182170546-07661fd941c0?w=800',
         data: new Date('2026-11-12T12:00:00.000Z'),
         categoria: 'Biodiversidade e Pesquisa',
+        fonte: 'https://revistapesquisa.fapesp.br/expedicao-cientifica-revela-a-biodiversidade-no-topo-da-amazonia/?utm_source=chatgpt.com',
         publicada: true,
         destaque: true,
       },
@@ -166,6 +169,150 @@ async function main() {
         img: 'https://images.unsplash.com/photo-1524704796725-9fc3044a58b2?w=800',
         data: new Date('2026-09-24T12:00:00.000Z'),
         categoria: 'Ictiologia e Conservação',
+        fonte:'https://www.gov.br/inpa/pt-br/assuntos/noticias/2026/tambaqui-e-classificado-como-vulneravel-e-pesquisadora-do-inpa-alerta-para-queda-na-populacao?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: false,
+      },
+      {
+        titulo: 'Após 12 anos de mistério, cientistas identificam nova espécie de planta na Mata Atlântica',
+        resumo:
+          'Uma planta encontrada em Minas Gerais foi identificada como uma espécie inédita, pertencente a um gênero que nunca havia sido registrado no Brasil.',
+        conteudo_completo:
+          'A espécie Oplonia doceana foi encontrada na Serra do Padre Ângelo, na região do médio rio Doce, em Minas Gerais. A planta foi coletada pela primeira vez em 2013, mas sua identificação levou 12 anos de estudos, comparações e análises botânicas.\n\nA descoberta revelou que ela possui parentesco mais próximo com uma espécie encontrada na Argentina e na Bolívia, ampliando o conhecimento sobre a distribuição das plantas na América do Sul. O caso demonstra como pesquisas de longo prazo são importantes para descobrir e compreender a biodiversidade brasileira.',
+        img: 'https://images.openai.com/static-rsc-4/uaSglFlW9KA73bOZR911_46ynGb4puPwQi3W4l5z7ETXFdgsABHOH7Hbji4swoiqDvSeqimVMH109hryOmlWa4cCgD2fZAZKPUMoavG8cSn4Ri3s4lg73iX21sHiCMlQjkQT3JOANur2Hi_zJisjYIDrk-19OVW0fgtphClegxY?purpose=inline',
+        data: new Date('2026-07-07T12:00:00.000Z'),
+        categoria: 'Botânica / Biodiversidade',
+        fonte: 'https://www.gov.br/inma/pt-br/assuntos/noticias/apos-12-anos-de-misterio-cientistas-identificam-nova-especie-de-planta-na-mata-atlantica?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'DNA na água revela peixe ameaçado e amplia mapa da biodiversidade em riachos do Espírito Santo',
+        resumo:
+          'Pesquisadores identificaram a presença de um peixe ameaçado por meio de vestígios de DNA encontrados na água, sem precisar capturar o animal.',
+        conteudo_completo:
+          'Cientistas utilizaram a técnica de DNA ambiental, conhecida como eDNA, para detectar a presença do peixe Trichogenes claviger, popularmente chamado de bagrinho-de-kaetés, em riachos da bacia do rio Itapemirim, no Espírito Santo.\n\nA técnica consiste em coletar amostras de água e analisar os materiais genéticos deixados pelos organismos que vivem no ambiente. O estudo também identificou outras espécies de vertebrados, mostrando que esse método pode ser uma importante ferramenta para monitorar a biodiversidade e ajudar na conservação de animais ameaçados, reduzindo a necessidade de capturas.',
+        img: 'https://images.openai.com/static-rsc-4/SNlebyDgCixctf6TVRtEV2h1Y41xbiTsdLOcZDtcD-N-hmy8CMLFZTvZ_skBYgRax_oTkkho-TN-KWrlziZTIQgDjyDj67VdMWrUFP3Q8m_ZPAO5b4DXZBuTa3xipJGqFUzeXCCMxOBmZSRSTaTEFPnuhXISIbt--YZaXZLY2c8?purpose=inline',
+        data: new Date('2026-06-24T12:00:00.000Z'),
+        categoria: 'Genética / Conservação',
+        fonte: 'https://www.gov.br/inma/pt-br/assuntos/noticias/dna-na-agua-revela-peixe-ameacado-e-amplia-mapa-da-biodiversidade-em-riachos-do-espirito-santo?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'Pesquisa descreve duas novas espécies de parasitos de peixes na Mata Atlântica carioca',
+        resumo:
+          'Pesquisadores encontraram dois parasitos desconhecidos pela ciência nas brânquias de peixes conhecidos como lambaris.',
+        conteudo_completo:
+          'Pesquisadores do Instituto Oswaldo Cruz identificaram duas novas espécies de parasitos em peixes da espécie Astyanax taeniatus, conhecidos popularmente como lambaris.\n\nOs animais foram coletados em ambientes aquáticos da Mata Atlântica, na região de Jacarepaguá, no Rio de Janeiro. Os parasitos foram encontrados nas brânquias, estruturas responsáveis pela respiração dos peixes. A descoberta contribui para ampliar o conhecimento sobre a biodiversidade de organismos parasitas, suas relações com os hospedeiros e o equilíbrio ecológico dos ambientes de água doce.',
+        img: 'https://images.openai.com/static-rsc-4/iXpIV7jFYffyVvwD6tH2qHZHG1tUUa1EbiKxRyRZY6UpQzPEmv4mPvsatp3EswZbENtgreXXa5HkNFq-3Rba0thYClED-umha4Zk5YfSSSbzVU5AJLLRZNXE5yRpHsQ8xYAbw4jnqo6z3-ojWHnu5DrOLTHwNUP5YINcL6V0iPg?purpose=inline',
+        data: new Date('2026-08-25T12:00:00.000Z'),
+        categoria: 'Zoologia / Parasitologia',
+        fonte: 'https://www.ioc.fiocruz.br/noticias/pesquisa-descreve-duas-novas-especies-de-parasitos-de-peixes-na-mata-atlantica-carioca?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: false,
+      },
+      {
+        titulo: 'Recifes brasileiros escondem duas novas espécies de peixes',
+        resumo:
+          'Estudos genéticos e anatômicos revelaram que peixes considerados de uma única espécie pertencem, na verdade, a grupos diferentes.',
+        conteudo_completo:
+          'Cientistas descobriram que peixes recifais anteriormente classificados como uma única espécie apresentam diferenças genéticas e físicas que indicam a existência de espécies distintas.\n\nEsses pequenos peixes vivem escondidos em frestas de rochas, buracos na areia e entre algas, o que dificulta sua observação. A pesquisa utilizou análises de DNA e características anatômicas para compreender melhor essa diversidade. O trabalho mostra que os ambientes marinhos brasileiros ainda guardam espécies desconhecidas e reforça a importância de proteger os recifes, ecossistemas ricos em vida.',
+        img: 'https://images.openai.com/static-rsc-4/hsdvYTP33QIYi74NAlr_7ZP5fGL37FoV064OL15BFew0XUYq2lTukBOIJhDgGXxfK3dCglQSjbp4RcOlZU8OMX1YBgtYKVrIK6eXvcTEyxvGraFWSHyEZzAzktoR1igXmu9eEniOfFXq9r9NCGWzIiVenXQrZRewLZmUL98PsSU?purpose=inline',
+        data: new Date('2026-08-11T12:00:00.000Z'),
+        categoria: 'Biologia Marinha / Zoologia',
+        fonte: 'https://www.gov.br/icmbio/pt-br/assuntos/centros-de-pesquisa/tartarugas-marinhas-e-biodiversidade-marinha-do-leste/comunicacao/ultimas-noticias/recifes-brasileiros-escondem-duas-novas-especies?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'Escondida entre as rochas, nova espécie de antúrio é descoberta na Serra do Padre Ângelo',
+        resumo:
+          'Uma nova espécie de antúrio foi identificada em uma região montanhosa de Minas Gerais e possui distribuição extremamente limitada.',
+        conteudo_completo:
+          'A espécie Anthurium occultum foi descoberta na Serra do Padre Ângelo, localizada no leste de Minas Gerais. A planta é conhecida apenas nessa região, o que significa que sua distribuição natural é muito restrita.\n\nDevido à vulnerabilidade de seu habitat e à sua ocorrência limitada, a espécie foi classificada como Criticamente em Perigo de extinção. A descoberta destaca a importância de pesquisas botânicas e da preservação de áreas naturais, pois espécies com distribuição pequena podem ser especialmente vulneráveis a alterações ambientais.',
+        img: 'https://images.openai.com/static-rsc-4/qnz4YyHglCFR6hpWiu_2hs1xYQpGTAki9H_TXgtgqOTK9fp14AAzZCHXQzQw7r1l6mUrion-ZqjdrXKcxqTMazB2qFt_PFlPDnnEWi2Ugv3Fc4ue79wV3XDh9sQKeXUz9rLoyPrtNbSsZ-R8J27VnIdJ42Fe2xGkiCXskzVZIc13AMEQ66CN6ttWn0c9iduG?purpose=fullsize',
+        data: new Date('2026-09-29T12:00:00.000Z'),
+        categoria: 'Botânica / Conservação',
+        fonte: 'https://www.gov.br/inma/pt-br/assuntos/noticias/escondida-entre-as-rochas-nova-especie-de-anturio-e-descoberta-na-serra-do-padre-angelo-em-minas-gerais?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'Instituto Butantan realiza primeiro sequenciamento do genoma da jararaca-ilhoa',
+        resumo:
+          'Pesquisadores sequenciaram o genoma da jararaca-ilhoa, uma serpente brasileira encontrada exclusivamente na Ilha da Queimada Grande.',
+        conteudo_completo:
+          'Cientistas do Instituto Butantan realizaram o primeiro sequenciamento completo do genoma em nível cromossômico da jararaca-ilhoa (Bothrops insularis).\n\nA espécie é endêmica da Ilha da Queimada Grande, localizada no litoral paulista, e possui características evolutivas importantes relacionadas ao seu isolamento geográfico. O estudo permitiu obter informações sobre a organização genética, a evolução da serpente, a composição de seu veneno e sua história populacional. Os dados podem auxiliar futuras pesquisas sobre genética, evolução, biodiversidade e conservação dessa espécie, que possui distribuição extremamente restrita.',
+        img: 'https://images.openai.com/static-rsc-4/02bp6g9-fy0aoLS5kykgFqxz0a1_e3YhPHU1kI6XAOi_a7m2sopI3O31aeVLzEALFI5i9o3Pr4iRZRA-KuJ8zp0lL0cOoL-FMUrYZg-eyxbh6-iAGU2jlJO8ZvJki7CyQiHaENGPLZZsj9qS7kf-1N8u0TgjJNvoxYAbImtUJNQ?purpose=inline',
+        data: new Date('2026-06-10T12:00:00.000Z'),
+        categoria: 'Genética / Zoologia / Evolução',
+        fonte: 'https://www.butantan.gov.br/noticias/pesquisadores-do-instituto-butantan-realizam-primeiro-sequenciamento-do-genoma-de-uma-serpente-insular-endemica-do-brasil?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'Planta carnívora rara e ameaçada é registrada pela primeira vez no Nordeste',
+        resumo:
+          'Uma planta carnívora rara foi registrada no Piauí, trazendo novas informações sobre sua distribuição e seu risco de extinção.',
+        conteudo_completo:
+          'A planta carnívora Utricularia warmingii foi registrada pela primeira vez no Nordeste brasileiro, em uma área alagada no município de Campo Maior, no Piauí.\n\nA descoberta aconteceu durante um inventário de plantas aquáticas realizado em 2023. A espécie estava sem registros em determinadas regiões há mais de 80 anos, o que tornou o achado importante para os estudos de biodiversidade. Após a descoberta, os pesquisadores reavaliaram sua situação de conservação e sugeriram a classificação da espécie como Em Perigo no Brasil. A pesquisa destaca como inventários botânicos são essenciais para identificar espécies raras e desenvolver estratégias de proteção.',
+        img: 'https://images.openai.com/static-rsc-4/rcEeNCxFYt3Zgyjw8ph3PKaIJ1FxddgC8ksOr1zDIigRm7OYFfOD9zb148Sh1Trzd4H4iU_ih1vqFUKljE8Acs-407-6ivGheTfP_XOzCF8PWc5Eaj-A5QclaVTuGDuxdsMMB_EFaohMyzko1eXDHiXCfJWBzoEHthOE9cMoL08?purpose=inline',
+        data: new Date('2026-03-11T12:00:00.000Z'),
+        categoria: 'Botânica / Biodiversidade',
+        fonte: 'https://www.gov.br/inma/pt-br/assuntos/noticias/planta-carnivora-rara-e-ameacada-e-registrada-pela-primeira-vez-no-nordeste?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: false,
+      },
+      {
+        titulo: 'Três novas espécies de plantas são descobertas na Mata Atlântica',
+        resumo:
+          'Pesquisadores identificaram três espécies de plantas do gênero Pleroma em áreas rochosas do Espírito Santo e de Minas Gerais.',
+        conteudo_completo:
+          'Cientistas descobriram três novas espécies de plantas pertencentes ao gênero Pleroma, da família Melastomataceae, na Mata Atlântica. As espécies foram nomeadas Pleroma latisepalum, Pleroma leucotrichum e Pleroma squamipilosum.\n\nElas foram encontradas em formações rochosas conhecidas como inselbergues, ambientes que possuem condições extremas, como pouca água, solo raso e forte exposição ao sol. Duas das espécies já apresentam preocupações relacionadas à conservação: uma foi classificada como Em Perigo e outra como Vulnerável. A descoberta reforça a importância da preservação desses ambientes, que possuem espécies altamente adaptadas e muitas vezes restritas a pequenas áreas.',
+        img: 'https://images.openai.com/static-rsc-4/JIpY2Y_Y2kB-mkcEj5V-0cfqLQ9IHNlO1WqjZR-ZgYtBQ-6x_yzjfKG29F5m9SxlFaxep6sd0akAA0FT2AtITA6ZHX7FzbIQM4Ax92j6SBHl-h4jB2zOEp4qsMU8GsT6jzUW2Be1uvmYgRiibGwzbLCyLypNE4Wt1bWcTizJT6E?purpose=inline',
+        data: new Date('2026-11-04T12:00:00.000Z'),
+        categoria: 'Botânica / Biodiversidade / Conservação',
+        fonte: 'https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/11/tres-novas-especies-de-plantas-sao-descobertas-na-mata-atlantica?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'Nova espécie de perereca-de-vidro é descoberta no coração do Cerrado',
+        resumo:
+          'Uma nova espécie de anfíbio foi identificada em Goiás e chamou atenção por sua pele translúcida e distribuição limitada.',
+        conteudo_completo:
+          'Uma nova espécie de perereca-de-vidro, denominada Vitreorana micaelae, foi descoberta em áreas de mata próximas a riachos em Luziânia, Goiás.\n\nEsses anfíbios são conhecidos pela pele fina e translúcida, que permite observar partes de seus órgãos internos. A espécie foi encontrada em apenas dois locais, o que levanta preocupações sobre sua conservação. Entre as principais ameaças estão a perda de habitat, mineração, construção de barragens e alterações ambientais que afetam os riachos. O estudo utilizou análises genéticas, características físicas e observação dos cantos para confirmar que se tratava de uma espécie diferente das já conhecidas.',
+        img: 'https://images.openai.com/static-rsc-4/N4c_TVkqdV9ltfXSIpfHZGRXnma0kknViaCP0eY2HqS5KS9iDVf5JZWkRSYseWtyADaToBAm5x60cjW-msxLgwx1jFglh8eIRmqza1Vtto8LanzcbIu0s0IMMxIUOjSzQXSPIPtRzHg7lgcHTbRLlNJBwyn1QSo0B_dYuB4LBJY?purpose=inline',
+        data: new Date('2026-10-22T12:00:00.000Z'),
+        categoria: 'Zoologia / Anfíbios / Conservação',
+        fonte: 'https://crbio08.gov.br/noticias/institucionais/nova-especie-de-perereca-de-vidro-e-descoberta-no-coracao-do-cerrado/?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: true,
+      },
+      {
+        titulo: 'DNA ambiental transforma o monitoramento da biodiversidade em riachos brasileiros',
+        resumo:
+          'O uso de DNA presente na água ajuda cientistas a identificar animais que vivem nos ecossistemas aquáticos, mesmo sem encontrá-los diretamente.',
+        conteudo_completo:
+          'O DNA ambiental é uma técnica que permite identificar organismos a partir de vestígios genéticos deixados no ambiente, como células, muco, escamas ou outros materiais biológicos presentes na água.\n\nPesquisadores podem coletar amostras de rios e riachos, analisar o material em laboratório e identificar espécies que habitam determinada região. Essa tecnologia facilita o monitoramento da biodiversidade, principalmente de animais raros, ameaçados ou difíceis de observar. Além disso, pode diminuir a necessidade de captura de animais, tornando algumas pesquisas menos invasivas e contribuindo para ações de conservação.',
+        img: 'https://images.openai.com/static-rsc-4/RLrYvDZ3N_ig37AQliXXyIHLWURQ1I-gi_SHp8f7BGf6j9Um6MzeE8nq99xqo1N_9i8e2NVxwRClBGc5E0CJ8tSGP5iYQ6jiFH-UxTqoKuIX1lNfsCge-_O1Meu3mBddAVJ6I7_END9u28DKzaHU4bmxtCxjbc5f2Yh6ojrHNJ1TJIq2he3Om3etD3VWHm8z?purpose=inline',
+        data: new Date('2026-06-24T12:00:00.000Z'),
+        categoria: 'Genética / Ecologia / Tecnologia',
+        fonte: 'https://www.gov.br/inma/pt-br/assuntos/noticias/dna-na-agua-revela-peixe-ameacado-e-amplia-mapa-da-biodiversidade-em-riachos-do-espirito-santo?utm_source=chatgpt.com',
+        publicada: true,
+        destaque: false,
+      },
+      {
+        titulo: 'Nova espécie de antúrio é descoberta crescendo sobre rochas no Espírito Santo',
+        resumo:
+          'Pesquisadores descobriram uma nova espécie de antúrio que cresce sobre rochas e foi identificada no estado do Espírito Santo.',
+        conteudo_completo:
+          'Pesquisadores do Instituto Nacional da Mata Atlântica (INMA), da Universidade Federal do Espírito Santo (UFES), do Jardim Botânico do Rio de Janeiro e da Universidade de São Paulo (USP) descobriram uma nova espécie de antúrio, chamada Anthurium petraeum, conhecida como antúrio-das-pedras.\n\nA planta foi coletada durante uma expedição científica realizada em março de 2022, no município de Linhares, no Espírito Santo. A identificação foi confirmada por meio de análises botânicas e consultas a coleções científicas. A espécie apresenta uma característica interessante: cresce sobre rochas, diferentemente de muitos antúrios encontrados em ambientes florestais.\n\nAté o momento, ela é considerada endêmica do Espírito Santo, com registros em Linhares e Marilândia. A descoberta reforça a importância das pesquisas botânicas e da conservação dos habitats naturais, principalmente porque espécies com distribuição restrita podem ser ameaçadas pelo desmatamento, pela retirada ilegal de plantas e pela degradação ambiental.',
+        img: 'https://images.openai.com/static-rsc-4/CVicFoCImTN6OyoVVmvFmxcGLqlSj-bIQdeqNcQtPKrALCvwDAzeqXiGsoI-UIjIqtKO3hBsWbKdWC4f37lFBEhqZCboKwCVluZj9hs6oDWyfaphm_4mlJ_L15SSyu353X6MTe2wkhmokBf8HcPGoePgl3eV6zfxiyVWRk5sQto?purpose=inline',
+        data: new Date('2026-02-19T12:00:00.000Z'),
+        categoria: 'Botânica / Biodiversidade / Conservação',
+        fonte: 'https://www.gov.br/inma/pt-br/nova-especie-de-anturio-e-descoberta-no-espirito-santo?utm_source=chatgpt.com',
         publicada: true,
         destaque: false,
       },
