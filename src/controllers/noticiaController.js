@@ -1,6 +1,6 @@
 import NoticiaModel from '../models/NoticiaModel.js';
 
-const camposTexto = ['resumo', 'conteudo_completo', 'img', 'categoria'];
+const camposTexto = ['resumo', 'conteudo_completo', 'img', 'categoria', 'fonte'];
 const camposBooleanos = ['publicada', 'destaque'];
 
 const validarCampos = (dados) => {
@@ -27,7 +27,7 @@ export const criar = async (req, res) => {
             return res.status(400).json({ error: 'Corpo da requisição vazio. Envie os dados!' });
         }
 
-        const { titulo, resumo, conteudo_completo, img, categoria, publicada, destaque } = req.body;
+        const { titulo, resumo, conteudo_completo, img, categoria, fonte, publicada, destaque } = req.body;
 
         if (typeof titulo !== 'string' || !titulo.trim()) {
             return res.status(400).json({ error: 'O campo "titulo" é obrigatório.' });
@@ -44,6 +44,7 @@ export const criar = async (req, res) => {
             conteudo_completo,
             img,
             categoria,
+            fonte,
             publicada,
             destaque
         });

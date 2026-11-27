@@ -13,17 +13,16 @@ async function main() {
   console.log('🌱 Iniciando o seed do banco de dados...');
 
   // Limpeza das tabelas em ordem reversa às dependências
-  await prisma.respostaSimulado.deleteMany();
-  await prisma.questaoSimulado.deleteMany();
-  await prisma.simulado.deleteMany();
-  await prisma.noticia.deleteMany();
-  await prisma.carreiras.deleteMany();
-  await prisma.dica.deleteMany();
-  await prisma.estagio.deleteMany();
-  await prisma.video.deleteMany();
-  await prisma.sobreNos.deleteMany();
-  await prisma.membroEquipe.deleteMany();
-  await prisma.administrador.deleteMany();
+  await prisma.$executeRaw`TRUNCATE TABLE "resposta_simulado" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "questao_simulado", "simulado" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "noticia" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "carreiras" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "dica" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "estagio" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "video" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "sobre_nos" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "membro_equipe" RESTART IDENTITY`;
+  await prisma.$executeRaw`TRUNCATE TABLE "administrador" RESTART IDENTITY`;
 
   // 1. Administrador
   const senhaHash = await bcrypt.hash('Admin@123', 10);

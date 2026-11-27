@@ -10,6 +10,7 @@ export default class NoticiaModel {
         data = null,
         atualizadaEm = null,
         categoria = null,
+        fonte = null,
         publicada = false,
         destaque = false
     } = {}) {
@@ -21,6 +22,7 @@ export default class NoticiaModel {
         this.data = data;
         this.atualizadaEm = atualizadaEm;
         this.categoria = categoria;
+        this.fonte = fonte;
         this.publicada = publicada;
         this.destaque = destaque;
     }
@@ -33,6 +35,7 @@ export default class NoticiaModel {
                 conteudo_completo: this.conteudo_completo,
                 img: this.img,
                 categoria: this.categoria,
+                fonte: this.fonte,
                 publicada: this.publicada,
                 destaque: this.destaque
             }
@@ -48,6 +51,7 @@ export default class NoticiaModel {
                 conteudo_completo: this.conteudo_completo,
                 img: this.img,
                 categoria: this.categoria,
+                fonte: this.fonte,
                 publicada: this.publicada,
                 destaque: this.destaque
             }
