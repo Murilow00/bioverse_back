@@ -11,6 +11,7 @@ import SimuladoRoute from './routes/simuladoRoute.js';
 import QuestaoSimuladoRoute from './routes/questaoSimuladoRoute.js';
 import RespostaSimuladoRoute from './routes/respostaSimuladoRoute.js';
 import VideoRoute from './routes/videoRoute.js';
+import UsuarioRoute from './routes/usuarioRoute.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -33,6 +34,7 @@ app.use('/api/simulados', SimuladoRoute);
 app.use('/api/questoes-simulados', QuestaoSimuladoRoute);
 app.use('/api/respostas-simulados', RespostaSimuladoRoute);
 app.use('/api/videos', VideoRoute);
+app.use('/api/usuarios', UsuarioRoute);
 app.use((req, res) => {
     res.status(404).json({ error: 'Rota não encontrada' });
 });
